@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="main.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="text-center"><img class="pull-right" src="img/logo.gif"></div>
+    </div>
+</header>
+
+<div class="content">
+    <div class="container">
+        <div class="own_account text-center">Личный кабинет интернета</div>
+        <div class="you_can text-center">В личном кабинете вы сможете пополнить счет, сменить тариф, а так же настроить<br>
+            дополнительные услуги. Если возникли сложности, звоните по телефону <a href="#">+7(496)255-40-00</a> </div>
+        <div class=" text-center">
+             <input onkeyup="checkParams()" id="login" placeholder="Логин">
+         </div>
+        <div class=" text-center">
+            <input onkeyup="checkParams()" id="password" placeholder="Пароль">
+        </div>
+        <div class=" text-center">
+            <a href="page2.html"><button onkeyup="checkParams()"  type="button" id="enter">Войти в кабинет</button></a>
+        </div>
+        <div class=" text-center">
+            <label class="checkbox info">
+                <input type="checkbox"> Хочу получить информацию<br> о беспроводном телевидении
+            </label>
+        </div>
+        <div class=" text-center">
+            <label class="checkbox">
+                <input type="checkbox"> Чужой компьютер
+            </label>
+        </div>
+        <div class=" text-center">
+        <a href="#"><span>Забыли пароль?</span></a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container text-center">
+        <img class="cards" src="img/cards.gif">
+    </div>
+</footer>
+
+
+<script>
+    function checkParams() {
+        var login = $('#login').val();
+        var password = $('#password').val();
+        var enter = $('#enter').val();
+
+        if(login.length != 0 && password.length != 0 && enter.length != 0) {
+            $('#submit').removeAttr('disabled');
+        } else {
+            $('#submit').attr('disabled', 'disabled');
+        }
+    }
+</script>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>
